@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 07:53:44 by djuarez           #+#    #+#             */
-/*   Updated: 2025/01/20 07:56:04 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/01/31 18:23:42 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ char	**ft_split(char *str, char separator)
 	return (vector_strings);
 }
 
-int     main()
+/*int     main()
 {
     char	*message;
     char	**result;
@@ -109,5 +109,4 @@ int     main()
     }
     free(result);
     return (0);
-}
-
+}*/
