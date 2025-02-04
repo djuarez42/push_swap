@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 09:06:04 by djuarez           #+#    #+#             */
-/*   Updated: 2025/01/27 19:30:52 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/03 21:26:28 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	rra(t_stack_node **a, bool checker)
 void	rrb(t_stack_node **b, bool checker)
 {
 	reverse_rotate(b);
-	if !(checker)
+	if (!checker)
 		write(1, "rrb\n", 4);
 }
 

@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 20:32:22 by djuarez           #+#    #+#             */
-/*   Updated: 2025/01/23 08:39:48 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/03 21:29:27 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	append_node(t_stack_node **stack, int nbr)
 	else 
 	{
 		last_node = find_last_node(*stack);
-		last_node->nex = node;
+		last_node->next = node;
 		node->prev = last_node;
 	}
 }
@@ -85,7 +85,7 @@ int	stack_len(t_stack_node *stack)
 	int	count;
 
 	if (NULL == stack)
-		return (NULL);
+		return (0);
 	count = 0;
 	while (stack)
 	{

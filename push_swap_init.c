@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 18:35:49 by djuarez           #+#    #+#             */
-/*   Updated: 2025/01/31 18:10:13 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/03 21:21:25 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static void	set_target_node(t_stack_node *a, t_stack_node *b)
 				best_match_index = current_a->value;
 				target_node = current_a;
 			}
-			current_a = current_a->next
+			current_a = current_a->next;
 		}
 		if (LONG_MAX == best_match_index)
 			b->target_node = find_smallest(a);
@@ -76,7 +76,7 @@ void	set_price(t_stack_node *a, t_stack_node *b)
 		if (b->above_median)
 			b->push_price += b->target_node->current_position;
 		else
-			b->push_price += len_a - (b-target_node->current_position);
+			b->push_price += len_a - (b->target_node->current_position);
 		b = b->next;
 	}
 }
@@ -101,7 +101,7 @@ void	set_cheapest(t_stack_node *b)
 	best_match_node->cheapest = true;
 }
 
-void	init_nodes(t_stack_node)
+void	init_nodes(t_stack_node *a, t_stack_node *b)
 {
 	set_current_position(a);
 	set_current_position(b);

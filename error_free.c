@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 08:50:28 by djuarez           #+#    #+#             */
-/*   Updated: 2025/01/20 10:26:39 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/03 20:20:42 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,13 +53,13 @@ void	error_free(t_stack_node **a, char **argv, bool flag_argc_2)
 int	error_syntax(char *str_nbr)
 {
 	if (!(*str_nbr == '+' || *str_nbr == '-' || 
-				(*str_nbr >= '0' && str_nbr <= '9')))
+				(*str_nbr >= '0' && *str_nbr <= '9')))
 		return (1);
 	if ((*str_nbr == '+' || *str_nbr == '-') && !(str_nbr[1] >= '0' && str_nbr[1] <= '9'))
 		return (1);
 	while (*++str_nbr)
 	{
-		if (!(*str_nbr >= '0' && str_nbr <= '9'))
+		if (!(*str_nbr >= '0' && *str_nbr <= '9'))
 			return (1);
 	}
 	return (0);

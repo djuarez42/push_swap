@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 07:52:52 by djuarez           #+#    #+#             */
-/*   Updated: 2025/02/03 18:49:33 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/03 20:36:36 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int		error_repetition(t_stack_node *a, int nbr);
 
 //***stack creation***
 void    stack_init(t_stack_node **a, char **argv, bool flag_argc_2);
-void    init_nodes(t_stack_node);
+void    init_nodes(t_stack_node *a, t_stack_node *b);
 void    set_current_position(t_stack_node *stack);
 void    set_price(t_stack_node *a, t_stack_node *b);
 void    set_cheapest(t_stack_node *b);
@@ -74,9 +74,9 @@ void    rra(t_stack_node **a, bool checker);
 void    rrb(t_stack_node **b, bool checker);
 void    rrr(t_stack_node **a, t_stack_node **b, bool checker);
 void    pa(t_stack_node **a, t_stack_node **b, bool checker);
-void    pb(t_stack_node **b, t_stack_node **b, bool checker);
+void    pb(t_stack_node **b, t_stack_node **a, bool checker);
 void    sa(t_stack_node **a, bool checker);
-void    sb(t_stack_node **b bool checker);
+void    sb(t_stack_node **b, bool checker);
 void    ss(t_stack_node **a, t_stack_node **b, bool checker);
 
 #endif

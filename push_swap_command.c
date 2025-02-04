@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 19:18:33 by djuarez           #+#    #+#             */
-/*   Updated: 2025/02/03 16:46:52 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/03 20:40:43 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,7 @@ void	finish_rotation(t_stack_node **stack, t_stack_node *top_node,
 {
 	if (stack_name != 'a' && stack_name != 'b')
 	{
-		ft_printf(stderr, "Error: invalid stack name '%c'. onle 'a' or
-				'b'are allowed.\n", stack_name);
+		ft_printf("Error: invalid stack name '%c'\n", stack_name);
 		return;
 	}
 	while (*stack != top_node)
@@ -95,10 +94,10 @@ void	push_swap(t_stack_node **a, t_stack_node **b)
 	}
 	set_current_position(*a);
 	smallest = find_smallest(*a);
-	if (smallest-_above_median)
+	if (smallest->above_median)
 		while (*a != smallest)
 			ra(a, false);
 	else
-		while (a* != smallest)
+		while (*a != smallest)
 			rra(a, false);
 }

@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 21:38:05 by djuarez           #+#    #+#             */
-/*   Updated: 2025/01/30 17:58:08 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/03 21:31:28 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ void	sa(t_stack_node **a, bool checker)
 		write(1, "sa\n", 3);
 }
 
-void	sb(t_stack_node **b bool checker)
+void	sb(t_stack_node **b, bool checker)
 {
-	swap(b)
-		if(!checker)
-			write(1, "sb\n", 3);
+	swap(b);
+	if(!checker)
+		write(1, "sb\n", 3);
 }
 
 void	ss(t_stack_node **a, t_stack_node **b, bool checker)
@@ -47,5 +47,5 @@ void	ss(t_stack_node **a, t_stack_node **b, bool checker)
 	swap(a);
 	swap(b);
 	if (!checker)
-		(write(1, "ss\n", 3);
+		write(1, "ss\n", 3);
 }

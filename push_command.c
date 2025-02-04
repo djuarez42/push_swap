@@ -1,14 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_comand.c                                      :+:      :+:    :+:   */
+/*   push_command.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 07:55:33 by djuarez           #+#    #+#             */
-/*   Updated: 2025/01/24 08:54:25 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/03 20:22:18 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "push_swap.h"
 
 static void	push(t_stack_node **dest, t_stack_node **src)
 {
@@ -40,7 +42,7 @@ void	pa(t_stack_node **a, t_stack_node **b, bool checker)
 		write(1, "pa\n", 3);
 }
 
-void	pb(t_stack_node **b, t_stack_node **b, bool checker)
+void	pb(t_stack_node **b, t_stack_node **a, bool checker)
 {
 	push(b, a);
 	if (!checker)

@@ -6,9 +6,11 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 16:48:23 by djuarez           #+#    #+#             */
-/*   Updated: 2025/02/03 18:36:04 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/04 07:31:02 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "push_swap.h"
 
 bool	stack_sorted(t_stack_node *stack)
 {
