@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 19:51:17 by djuarez           #+#    #+#             */
-/*   Updated: 2025/01/29 21:24:44 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/07 10:19:16 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	rotate(t_stack_node **stack)
 
 	len = stack_len(*stack);
 	if (NULL == stack || NULL == *stack || 1 == len)
-		return;
+		return ;
 	last_node = find_last_node(*stack);
 	last_node->next = *stack;
 	*stack = (*stack)->next;

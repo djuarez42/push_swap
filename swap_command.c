@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 21:38:05 by djuarez           #+#    #+#             */
-/*   Updated: 2025/02/03 21:31:28 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/07 08:57:00 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ static void	swap(t_stack_node **head)
 
 	len = stack_len(*head);
 	if (head == NULL || len == 1)
-		return;
+		return ;
 	*head = (*head)->next;
 	(*head)->prev->prev = *head;
 	(*head)->prev->next = (*head)->next;
-	if ((*head)->next)//continue from here
+	if ((*head)->next)
 		(*head)->next->prev = (*head)->prev;
 	(*head)->next = (*head)->prev;
 	(*head)->prev = NULL;
@@ -38,7 +38,7 @@ void	sa(t_stack_node **a, bool checker)
 void	sb(t_stack_node **b, bool checker)
 {
 	swap(b);
-	if(!checker)
+	if (!checker)
 		write(1, "sb\n", 3);
 }
 

@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 08:42:37 by djuarez           #+#    #+#             */
-/*   Updated: 2025/01/23 10:13:19 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/07 08:58:20 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static long	ft_atol(const char *str)
 void	stack_init(t_stack_node **a, char **argv, bool flag_argc_2)
 {
 	long	nbr;
-	int	i;
+	int		i;
 
 	i = 0;
 	while (argv[i])

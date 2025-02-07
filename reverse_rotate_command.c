@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 09:06:04 by djuarez           #+#    #+#             */
-/*   Updated: 2025/02/03 21:26:28 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/07 08:54:36 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	reverse_rotate(t_stack_node **stack)
 {
 	t_stack_node	*last;
-	int	len;
+	int				len;
 
 	len = stack_len(*stack);
 	if (NULL == *stack || NULL == stack || 1 == len)

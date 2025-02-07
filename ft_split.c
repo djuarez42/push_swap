@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 07:53:44 by djuarez           #+#    #+#             */
-/*   Updated: 2025/01/31 18:23:42 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/07 10:03:35 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static int	count_words(char *str, char separator)
 {
-	int	count;
+	int		count;
+	int		i;
 	bool	inside_word;
-	int	i;
 
 	i = 0;
 	count = 0;
@@ -41,9 +41,9 @@ static int	count_words(char *str, char separator)
 static char	*get_next_word(char *str, char separator)
 {
 	static int	cursor;
-	char	*next_str;
-	int	len;
-	int	i;
+	char		*next_str;
+	int			len;
+	int			i;
 
 	len = 0;
 	i = 0;
@@ -53,7 +53,7 @@ static char	*get_next_word(char *str, char separator)
 		++len;
 	if (len == 0)
 		return (NULL);
-	next_str =  malloc((size_t)len * sizeof(char) + 1);
+	next_str = malloc((size_t)len * sizeof(char) + 1);
 	if (NULL == next_str)
 		return (NULL);
 	while ((str[cursor] != separator) && str[cursor])
@@ -64,17 +64,17 @@ static char	*get_next_word(char *str, char separator)
 
 char	**ft_split(char *str, char separator)
 {
-	int	words_number;
 	char	**vector_strings;
-	int	i;
+	int		words_number;
+	int		i;
 
 	i = 0;
 	words_number = count_words(str, separator);
 	if (!words_number)
 		exit (1);
 	vector_strings = malloc(sizeof(char *) * (size_t)(words_number + 2));
-		if (NULL == vector_strings)
-			return (NULL);
+	if (NULL == vector_strings)
+		return (NULL);
 	while (words_number-- >= 0)
 	{
 		if (0 == i)
@@ -83,10 +83,10 @@ char	**ft_split(char *str, char separator)
 			if (NULL == vector_strings[i])
 				return (NULL);
 			vector_strings[i++][0] = '\0';
-			continue;
+			continue ;
 		}
 		vector_strings[i++] = get_next_word(str, separator);
-	}	
+	}
 	vector_strings[i] = NULL;
 	return (vector_strings);
 }

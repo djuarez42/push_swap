@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 16:48:23 by djuarez           #+#    #+#             */
-/*   Updated: 2025/02/04 07:31:02 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/07 09:00:50 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ bool	stack_sorted(t_stack_node *stack)
 static t_stack_node	*find_highest(t_stack_node *stack)
 {
 	int				highest;
-	t_stack_node		*highest_node;
+	t_stack_node	*highest_node;
 
 	if (NULL == stack)
 		return (NULL);
@@ -37,7 +37,7 @@ static t_stack_node	*find_highest(t_stack_node *stack)
 	{
 		if (stack->value > highest)
 		{
-			highest =  stack->value;
+			highest = stack->value;
 			highest_node = stack;
 		}
 		stack = stack->next;

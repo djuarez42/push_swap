@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 07:55:33 by djuarez           #+#    #+#             */
-/*   Updated: 2025/02/03 20:22:18 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/07 10:05:20 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	push(t_stack_node **dest, t_stack_node **src)
 	t_stack_node	*node_to_push;
 
 	if (NULL == *src)
-		return;
+		return ;
 	node_to_push = *src;
 	*src = (*src)->next;
 	if (*src)
@@ -35,6 +35,7 @@ static void	push(t_stack_node **dest, t_stack_node **src)
 		*dest = node_to_push;
 	}
 }
+
 void	pa(t_stack_node **a, t_stack_node **b, bool checker)
 {
 	push(a, b);

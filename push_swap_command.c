@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 19:18:33 by djuarez           #+#    #+#             */
-/*   Updated: 2025/02/03 20:40:43 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/07 10:15:00 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	finish_rotation(t_stack_node **stack, t_stack_node *top_node,
 	if (stack_name != 'a' && stack_name != 'b')
 	{
 		ft_printf("Error: invalid stack name '%c'\n", stack_name);
-		return;
+		return ;
 	}
 	while (*stack != top_node)
 	{
@@ -61,12 +61,12 @@ static void	move_nodes(t_stack_node **a, t_stack_node **b)
 {
 	t_stack_node	*cheapest_node;
 
-	cheapest_node =  return_cheapest(*b);
-	if (cheapest_node->above_median && 
-			cheapest_node->target_node->above_median)
+	cheapest_node = return_cheapest(*b);
+	if (cheapest_node->above_median && cheapest_node
+		->target_node->above_median)
 		rotate_both(a, b, cheapest_node);
-	else if (!(cheapest_node->above_median) && 
-                       !(cheapest_node->target_node->above_median))
+	else if (!(cheapest_node->above_median) && !(cheapest_node->target_node
+			->above_median))
 		reverse_rotate_both(a, b, cheapest_node);
 	finish_rotation(b, cheapest_node, 'b');
 	finish_rotation(a, cheapest_node->target_node, 'a');
@@ -80,7 +80,7 @@ void	push_swap(t_stack_node **a, t_stack_node **b)
 
 	len_a = stack_len(*a);
 	if (len_a == 5)
-		handle_five(a,b);
+		handle_five(a, b);
 	else
 	{
 		while (len_a-- > 3)
