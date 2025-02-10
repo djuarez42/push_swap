@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 18:35:49 by djuarez           #+#    #+#             */
-/*   Updated: 2025/02/03 21:21:25 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/10 07:57:58 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	set_current_position(t_stack_node *stack)
 {
 	int	i;
-	int 	centerline;
+	int	centerline;
 
 	i = 0;
 	if (NULL == stack)
@@ -37,7 +37,7 @@ static void	set_target_node(t_stack_node *a, t_stack_node *b)
 {
 	t_stack_node	*current_a;
 	t_stack_node	*target_node;
-	long		best_match_index;
+	long			best_match_index;
 
 	while (b)
 	{
@@ -46,7 +46,7 @@ static void	set_target_node(t_stack_node *a, t_stack_node *b)
 		while (current_a)
 		{
 			if (current_a->value > b->value
-					&& current_a->value < best_match_index)
+				&& current_a->value < best_match_index)
 			{
 				best_match_index = current_a->value;
 				target_node = current_a;
@@ -87,7 +87,7 @@ void	set_cheapest(t_stack_node *b)
 	t_stack_node	*best_match_node;
 
 	if (NULL == b)
-		return;
+		return ;
 	best_match_value = LONG_MAX;
 	while (b)
 	{
