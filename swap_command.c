@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 21:38:05 by djuarez           #+#    #+#             */
-/*   Updated: 2025/02/07 08:57:00 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/12 11:27:17 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	swap(t_stack_node **head)
 	int	len;
 
 	len = stack_len(*head);
-	if (head == NULL || len == 1)
+	if (NULL == *head || NULL == head || 1 == len)
 		return ;
 	*head = (*head)->next;
 	(*head)->prev->prev = *head;

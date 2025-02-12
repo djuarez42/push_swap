@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 08:42:37 by djuarez           #+#    #+#             */
-/*   Updated: 2025/02/07 08:58:20 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/12 11:10:02 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	stack_init(t_stack_node **a, char **argv, bool flag_argc_2)
 		if (error_repetition(*a, (int)nbr))
 			error_free(a, argv, flag_argc_2);
 		append_node(a, (int)nbr);
-		i++;
+		++i;
 	}
 	if (flag_argc_2)
 		free_matrix(argv);
