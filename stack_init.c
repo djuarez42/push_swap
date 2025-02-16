@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 08:42:37 by djuarez           #+#    #+#             */
-/*   Updated: 2025/02/12 11:10:02 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/16 17:58:22 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ void	stack_init(t_stack_node **a, char **argv, bool flag_argc_2)
 	i = 0;
 	while (argv[i])
 	{
+		if (argv[i][0] == '\0')
+			error_free(a, argv, flag_argc_2);
 		if (error_syntax(argv[i]))
 			error_free(a, argv, flag_argc_2);
 		nbr = ft_atol(argv[i]);

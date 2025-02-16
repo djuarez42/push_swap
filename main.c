@@ -6,7 +6,7 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 20:42:59 by djuarez           #+#    #+#             */
-/*   Updated: 2025/02/03 21:02:22 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/16 18:08:23 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ int	main(int argc, char **argv)
 	a = NULL;
 	b = NULL;
 	if (1 == argc || (2 == argc && !argv[1][0]))
-		return (1);
+	{
+		write(2, "Error\n", 6);
+		exit(1);
+	}
 	else if (2 == argc)
 		argv = ft_split(argv[1], ' ');
 	stack_init(&a, argv + 1, 2 == argc);
