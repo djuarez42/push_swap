@@ -6,11 +6,12 @@
 /*   By: djuarez <djuarez@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 19:18:33 by djuarez           #+#    #+#             */
-/*   Updated: 2025/02/07 10:15:00 by djuarez          ###   ########.fr       */
+/*   Updated: 2025/02/16 21:14:50 by djuarez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include "ft_printf/ft_printf.h"
 
 static void	rotate_both(t_stack_node **a, t_stack_node **b,
 		t_stack_node *cheapest_node)
